@@ -10,6 +10,15 @@
 </div>
 
 <div>
+  <div id='map' class = 'dark'></div>
+  <script type = 'text/javascript'>
+    L.mapbox.accessToken = 'pk.eyJ1Ijoic2h1dGVkIiwiYSI6ImNpbmkzd21nMDB3aGt1a2x5aTBzYzMwMWsifQ.3A032qJzNSPTLjVKFpW4XA'
+    var map = L.mapbox.map('map', 'mapbox.streets')
+      .setView([42.730, 73.67 ], 15)
+  </script>
+</div>
+
+<div>
 <%= link_to image_tag("images.png", alt: "RPI Logo"), 
                       'http://rpi.edu' %>
 </div>

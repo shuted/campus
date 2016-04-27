@@ -6,7 +6,12 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
     <%= render 'layouts/shim' %>
-   
+    <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet' />
+    <style>
+      body { margin:30px; padding: 44px; }
+      #map { position:absolute; top:380px; bottom:50px; width:70%; }
+    </style>
   </head>
   <body>
     <%= render 'layouts/heading' %>
