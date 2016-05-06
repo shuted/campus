@@ -48,6 +48,11 @@ class UsersController < ApplicationController
     redirect_to users_url
   end
   
+  def get_ip
+    result = request.location.ip
+    flash[:success] = "user ip = " + result
+  end
+  
   private
     def user_params
       params.require(:user).permit(:name, :email, 
