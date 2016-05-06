@@ -11,8 +11,10 @@
 // about supported directives.
 //
 //= require jquery
+//= require ahoy
 //= require jquery_ujs
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
 //= require mapbox.js
+

@@ -7,16 +7,22 @@
       <h1>
         <%= gravatar_for @user %>
         <%= @user.name %>
+
       </h1>
     </section>
   </aside>
-  <!--<div class="col-md-8">
-    <% if @user.microposts.any? %>
-      <h3>Microposts (<%= @user.microposts.count %>)</h3>
-      <ol class = "microposts" >
-        <%= render @microposts %>
-      </ol>
-      <%= will_paginate @microposts %> 
-    <% end %> 
-  </div>-->
+  
+  <div id='map' class = 'dark'></div>
+    
+    <script type = 'text/javascript'>
+      L.mapbox.accessToken = 'pk.eyJ1Ijoic2h1dGVkIiwiYSI6ImNpbmkzd21nMDB3aGt1a2x5aTBzYzMwMWsifQ.3A032qJzNSPTLjVKFpW4XA'
+      var map = L.mapbox.map('map', 'mapbox.streets')
+      .setView([42.7302, -73.6788], 15)
+      var circle = L.circleMarker([42.730, -73.6785], {radius: 128}).addTo(map);
+    </script>
+  
+  
 </div>
+
+   
+  

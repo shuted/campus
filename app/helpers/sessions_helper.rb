@@ -3,6 +3,7 @@ module SessionsHelper
   #logs in given user
   def log_in(user)
     session[:user_id] = user.id
+    ahoy.authenticate(user)
   end
   
   #remembers a user in a persistent session
